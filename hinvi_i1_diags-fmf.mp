@@ -1,0 +1,54 @@
+% hinvi_i1_diags-fmf.mp -- do not edit, generated automatically by cpc_inv.tex
+input feynmp
+require_RCS_revision "1.30";
+beginchar(1, 105*1.0pt#, 90*1.0pt#, 0);
+"feynmf: 1";
+LaTeX_unitlength:=1.0pt;
+subgraph (0, 0, w, h);
+vinit;
+pickup pencircle scaled thin;
+pickup pencircle scaled thin;
+save arrow_len; arrow_len:=2mm;
+vleft (__i1, __i2);
+vright (__o6, __o5, __o8, __o7, __o4, __o3);
+vlabel ("${e^-}$", __i1);
+vlabel ("${e^+}$", __i2);
+vlabel ("${\bar {\nu }}$", __o6);
+vlabel ("${\nu }$", __o5);
+vlabel ("${\bar {\nu }}$", __o8);
+vlabel ("${\nu }$", __o7);
+vlabel ("${\bar {f}}$", __o4);
+vlabel ("${f}$", __o3);
+vconnect ("fermion", __i1, __v1);
+vdot (__v1);
+vdot (__v1);
+vconnect ("fermion", __v1, __i2);
+vconnect ("wiggly,label=\begin {scriptsize}${Z}$\end {scriptsize}", __v1, __v5);
+vdot (__v1, __v5);
+vconnect ("wiggly,label=\begin {scriptsize}${}$\end {scriptsize}", __v5, __v20);
+vdot (__v5, __v20);
+vdot (__v20);
+vconnect ("fermion,tension=0.5", __v20, __o3);
+vdot (__v20);
+vconnect ("fermion,tension=0.5", __o4, __v20);
+vconnect ("dashes,label=\begin {scriptsize}${h}$\end {scriptsize}", __v5, __v21);
+vdot (__v5, __v21);
+vconnect ("wiggly,label=\begin {scriptsize}${Z}$\end {scriptsize}", __v21, __v84);
+vdot (__v21, __v84);
+vdot (__v84);
+vconnect ("fermion,tension=0.5", __v84, __o7);
+vdot (__v84);
+vconnect ("fermion,tension=0.5", __o8, __v84);
+vconnect ("wiggly,label=\begin {scriptsize}${Z^*}$\end {scriptsize}", __v21, __v85);
+vdot (__v21, __v85);
+vdot (__v85);
+vconnect ("fermion,tension=0.5", __v85, __o5);
+vdot (__v85);
+vconnect ("fermion,tension=0.5", __o6, __v85);
+vfreeze;
+vdraw;
+endsubgraph;
+endchar;
+% the end.
+end.
+endinput;

@@ -1,0 +1,363 @@
+
+\documentclass[a4paper,10pt,twoside]{cpc-hepnp}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amssymb,bm,mathrsfs,bbm,amscd}
+\usepackage[tbtags]{amsmath}
+\usepackage{lastpage}
+\usepackage{upgreek}
+\usepackage{CJK}
+\usepackage{enumerate}
+\usepackage{flushend,cuted}
+\usepackage{ifpdf}
+\usepackage{feynmp}
+\ifpdf
+   \DeclareGraphicsRule{*}{mps}{*}{}
+\else
+   \DeclareGraphicsRule{*}{eps}{*}{}
+\fi
+\hyphenpenalty=5000
+\tolerance=1000
+
+\begin{document}
+\begin{CJK*}{GBK}{song}
+
+
+\fancyhead[c]{\small Chinese Physics C~~~Vol. XX, No. X (201X)
+XXXXXX} \fancyfoot[C]{\small 010201-\thepage}
+
+%\footnotetext[0]{Received 14 March 2009}
+\footnotetext[0]{* The study was supported by the Joint Funds of the NSFC under Contracts No. U1232105 and funding from CAS for the Hundred Talent programs No. Y3515540U1.}
+
+\title{Measurement of invisible decays of Higgs bosons at the CEPC}
+
+%\author{%
+%      %Author1$^{1,2;1)}$\email{wuyf@mail.ihep.ac.cn}%
+%\quad Zhen-Xing Chen (陈振兴)$^{1,2;1}$\email{zxchen@ihep.ac.cn}%
+%\quad Man-Qi Ruan (阮曼奇)$^{2;2}$\email{ruanmq@ihep.ac.cn}%
+%\quad Da-Yong Wang (王大勇)$^{1;3}$\email{dayong.wang@pku.edu.cn}                                    \\
+%\quad Gang Li (李刚)$^{2}$
+%\quad Shan Jin (金山)$^{2}$%\email{jins@ihep.ac.cn}%
+%\quad Yong Ban (班勇)$^{1}$%\email{bany@pku.edu.cn}%
+%}
+\maketitle
+
+%\address{%
+%$^1$ State Key Laboratory of Nuclear Physics and Technology, Peking University, Beijing 100871, China\\
+%$^2$ Institute of High Energy Physics, Chinese Academy of Sciences, Beijing 100049, China\\
+%}
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\begin{keyword}
+CEPC, Higgs, invisible decay
+\end{keyword}
+
+\begin{pacs}
+
+\end{pacs}
+
+
+\footnotetext[0]{\hspace*{-3mm}\raisebox{0.3ex}{$\scriptstyle\copyright$}2013
+Chinese Physical Society and the Institute of High Energy Physics
+of the Chinese Academy of Sciences and the Institute
+of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd}%
+
+\begin{multicols}{2}
+
+\section{Introduction}
+A Higgs boson was discovered at the LHC~\cite{higgsdis1,higgsdis2}, it is highly standard model (SM) like and this viewpoint seems to be supported by the following measurements
+~\cite{lhcsub1,lhcsub2,lhcsub3,lhcsub4,lhcsub5,lhcsub6}. However, the experimental uncertainties are large and the possibility of new physics beyond the SM still remains. In the SM, a Higgs boson of 125 GeV decays invisibly only via the process $H\rightarrow ZZ$, $ZZ\rightarrow \nu\bar{\nu}\nu\bar{\nu}$, with a branching ratio of $1.06\times 10^{-3}$.  Meanwhile, many extensions of SM suggest a enlarged branching ratio of invisible decay of the Higgs boson. For example, the Higgs boson takes the role of mediator between the SM particles and the DM particle in the Higgs-portal models of dark matter (DM) interactions. Therefore, the invisible decay of Higgs boson is a sensitive probe for new physics.
+
+The search for invisible decay of the Higgs boson is a hot topic at the LHC. The characteristic signature at the LHC is a large missing transverse momentum recoiling
+against a distinctive visible system. The Higgs boson is tagged in association with a vector boson ($VH$, where $V$ denotes $W$ or $Z$) or with jets in the vector boson fusion (VBF, via $qq\rightarrow qqH$). A combination of these two processes at the ATLAS gives an upper limit of 0.25 on the Higgs boson invisible branching ratio ${\cal B}(H\rightarrow inv.)$, meanwhile, the upper limit given by the CMS is 0.24. It is difficult even for the future high luminosity LHC to test the SM directly with the
+${\cal B}(H\rightarrow inv.)$.
+
+The precision measurement can be performed at an electron position collider. The beam energy and polarization of the initial states are precisely known and adjustable. Thus, the Higgs production cross section is available with the recoil technique. In this way, a lepton collider can provide absolute measurements of Higgs couplings. Besides, it is free of the QCD backgrounds. Almost every Higgs event can be recorded and reconstructed. Therefore, an electron-positron Higgs factory is an essential step for understanding the nature of the Higgs boson.
+
+The Circular Electron Positron Collider(CEPC) is a Higgs factory proposed by the Chinese high energy physics community.
+It will operate at a center-of-mass energy of 240-250 GeV with an instantaneous luminosity of 2 $\times$ $\rm{10}^{\rm{34}}$ $\rm{cm}^{\rm{-2}}$ $\rm{s}^{\rm{-1}}$. With two detectors operating over 10 years, the CEPC will accumulate about one million Higgs events, corresponding to an integrated luminosity of 5 ab$^{\rm{-1}}$.
+
+Benefitting the recoil mass method at the CEPC, a better measurement of Higgs decaying to invisible particles can be achievable.
+In this paper, we evaluate the upper limit on the branching ratio of the Higgs decaying to invisible final states.
+
+\begin{center}
+\vspace{0.2cm}
+\begin{fmffile}{hinvi_i1_diags-fmf}
+\fmfframe(8,7)(8,6){%
+  \begin{fmfgraph*}(105,90)
+   \fmfpen{thin}
+   \fmfset{arrow_len}{2mm}
+    \fmfleft{i1,i2}
+    \fmfright{o6,o5,o8,o7,o4,o3}
+    \fmflabel{${e^-}$}{i1}
+    \fmflabel{${e^+}$}{i2}
+    \fmflabel{${\bar{\nu}}$}{o6}
+    \fmflabel{${\nu}$}{o5}
+    \fmflabel{${\bar{\nu}}$}{o8}
+    \fmflabel{${\nu}$}{o7}
+    \fmflabel{${\bar{f}}$}{o4}
+    \fmflabel{${f}$}{o3}
+    \fmf{fermion}{i1,v1}
+    \fmfdot{v1}
+    \fmfdot{v1}
+    \fmf{fermion}{v1,i2}
+    \fmf{wiggly,label=\begin{scriptsize}${Z}$\end{scriptsize}}{v1,v5}
+    \fmfdot{v1,v5}
+    \fmf{wiggly,label=\begin{scriptsize}${}$\end{scriptsize}}{v5,v20}
+    \fmfdot{v5,v20}
+    \fmfdot{v20}
+    \fmf{fermion,tension=0.5}{v20,o3}
+    \fmfdot{v20}
+    \fmf{fermion,tension=0.5}{o4,v20}
+    \fmf{dashes,label=\begin{scriptsize}${h}$\end{scriptsize}}{v5,v21}
+    \fmfdot{v5,v21}
+    \fmf{wiggly,label=\begin{scriptsize}${Z}$\end{scriptsize}}{v21,v84}
+    \fmfdot{v21,v84}
+    \fmfdot{v84}
+    \fmf{fermion,tension=0.5}{v84,o7}
+    \fmfdot{v84}
+    \fmf{fermion,tension=0.5}{o8,v84}
+    \fmf{wiggly,label=\begin{scriptsize}${Z^*}$\end{scriptsize}}{v21,v85}
+    \fmfdot{v21,v85}
+    \fmfdot{v85}
+    \fmf{fermion,tension=0.5}{v85,o5}
+    \fmfdot{v85}
+    \fmf{fermion,tension=0.5}{o6,v85}
+  \end{fmfgraph*}}\hfil\allowbreak
+\end{fmffile}
+\vspace{0.25cm}
+\figcaption{\label{fig:hinvi}In the energy region of the CEPC, Higgs boson is dominantly produced with associated Z boson. Z boson decays into lepton and quarks and the so-called leptonic and hadronic channels are separated respectively. In SM, Higgs boson can decay invisibly into neutrinos vis virtual Z bosons.}
+\end{center}
+
+\section{Detector and Monte Carlo Simulation}
+The analysis is performed on MC samples simulated on the CEPC conceptual detector,
+which is based on the International Large Detector (ILD)~\cite{ild1,ild2} at the ILC~\cite{ILC}.
+With respect to the ILD, the CEPC conceptual detector has a $L^{*}$
+(the distance between the interaction point and QD0, the final focusing magnet) of 1.5 m, which is significantly shorter than that of the ILC (4.5 m).
+The shorter $L^{*}$ is essential to achieve a high luminosity by reducing the beam nonlinearity in the interaction region. Besides,
+the CEPC has multiple interaction points, so push-pull operation is not necessary.
+Therefore, the thickness of the return yoke is reduced by 1 meter at the CEPC conceptual detector.
+The detailed information about the CEPC conceptual detector can be found in Ref.~\cite{CEPC}.
+
+A set of event samples at a center-of-mass energy of 250 GeV,
+corresponding to an integrated luminosity of 5 ab$^{\rm{-1}}$, has been generated with Whizard 1.95~\cite{whizard1,whizard2}.
+It consists of the SM Higgs signal with $m_{H}$ = 125 GeV and the major SM backgrounds,
+including the 2-fermion processes ($e^+e^-\rightarrow f\bar{f}$, where $f\bar{f}$ refers to all lepton and quark pairs)
+and 4-fermion processes, categorized as $ZZ$, $WW$, $ZZ$ or $WW$, single $Z$ ($e^+e^- Z$) and single $W$ ($e^+\nu_e W$ or $e^-\bar{\nu_e} W$).
+If the final states could be produced through both $WW$ and $ZZ$ intermediate states, such as $e^{+}e^{-}\nu_{e}\bar{\nu_{e}}$, this process is classified as ``$ZZ$ or $WW$''
+and their interference is included. The initial state radiation (ISR) is also taken into account in the sample generation.
+More details about the CEPC samples can be found in reference~\cite{samples}.
+
+The Higgs signal samples are fully simulated with Mokka~\cite{Mokka} and reconstructed with ArborPFA~\cite{arbor}.
+A beam energy spread of 0.16\% has been included in this analysis.
+In order to save computing power, a fast simulation framework has been developed to process the backgrounds.
+In the fast simulation, the detector responses are obtained by a series of full simulations for single particle events. Then the responses,
+including momentum resolution and detection efficiency, have been parameterized as functions of
+energy and polar angle for different types of particles. The four-momenta of the visible final state particles are smeared according to
+the parameterized resolutions and they are randomly accepted based on the corresponding detection efficiencies.
+
+
+\section{Analyses}
+With the Higgs boson decaying invisibly, the reconstructed final state comes from the decay products of $Z$ boson. The measurements are divided according to the varied decay products of $Z$
+boson. In each subchannel, the event selection is composed of a pre-selection and a multivariate analysis (MVA). Assuming the Higgs boson has a SM coupling to the Z boson and non-vanishing couplings to the beyond-SM invisible particles, the measurement potential of the Higgs boson decaying to invisible final states at the CEPC is investigated at different values of
+${\cal B}(H\rightarrow \rm{inv.})$.
+
+\subsection{Measurement with $Z\rightarrow e^+e^-$}
+
+In the pre-selection, it is required that the visible final state is only a pair of oppositely charged electrons. The electrons and positrons in the main potential background Bhabha process
+tend to move along the beam direction. To suppress the Bhabha events, the polar angle of positron $\theta_{e^+}$ should satisfy $cos\theta_{e^+}>$-0.9 while the electron should satisfy
+$cos\theta_{e^-}<$0.9. The recoiling mass of the $e^+e^-$ pair is required to satisfy 120 GeV $<\ M_{recoil}^{e^+e^-}\ <$ 160 GeV while the invariant mass is in the region of
+80 GeV $<\ M_{e^+e^-}\ <$ 100 GeV. A series of selection criteria are applied to further suppress 2-fermion backgrounds. The transverse momentum of the $e^+e^-$ pair, $p_{\rm{T}e^+e^-}$, is required to be larger than 20 GeV and the difference of the azimuth angles of the two electrons should be less than $\rm{175}^{\circ}$.
+
+The Toolkit for Multivariate Analysis (TMVA)~\cite{TMVA} is used for further background rejection. In this paper, the method of gradient Boosted Decision Trees (BDT) is adopted and the
+selected variables for TMVA input are $M_{e^+e^-}$, $p_{\rm{T}e^+e^-}$, the polar angle of the Z candidate and the acollinearity of the electron pair, which is defined as
+\begin{equation}
+acol=\rm{cos}^{\rm{-1}}\frac{\textbf{\emph{p}}_{e^+}\cdot \textbf{\emph{p}}_{e^-}}{|\textbf{\emph{p}}_{e^+}|\cdot|\textbf{\emph{p}}_{e^{-}}|}~,
+\end{equation}
+where $\textbf{\emph{p}}$$_{e^{\pm}}$ is the momentum vector of $e^{\pm}$. After the pre-selection, half of the remaining backgrounds are selected
+for training, together with another copy of the signal sample of 5 $ab^{\rm{-1}}$. The BDT response is calculated using weights obtained from
+the training samples and applied to the whole data set.
+
+The BDT selection is optimized to the $\sigma_{ZH,H\rightarrow inv.}$ measurement. The cut flow is summarized in Table~\ref{tab:cutflow1}, assuming the Higgs boson decaying to invisible final states completely, and the signal selection efficiency is 40.4\%. 
+
+\end{multicols}
+
+\begin{center}
+%\centering  % 表居中
+  \tabcaption{Efficiencies of signal and background in the $e^+e^-$ channel}
+  \footnotesize
+  \begin{tabular*}{170mm}{@{\extracolsep{\fill}}ccccccccc}  \toprule
+%\begin{tabular}{lcccccccccc}  % {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
+                                                                    &$Z(e^+e^-)H$     &$ZZ$    &$WW$     &$ZZ$ or $WW$ &Single $Z$  &Single $W$ &$Z$ or $W$  &$Z$(2$f$)    \\  \hline
+  total generated                                                   &35247            &5347053 &44180832 &17801222     &7809747     &17020770   &1246802     &418595861    \\
+  $N_{e^+}$= 1, $N_{e^-}$= 1, $N_{ch}$=2                            &96.0\%           &0.01\%  &0.00\%   &0.10\%       &3.61\%      &1.44\%     &77.72\%     &6.73\%       \\
+  $cos\theta_{e^+}>$-0.9, $cos\theta_{e^-}<$0.9                     &84.6\%           &0.01\%  &0.00\%   &0.07\%       &0.93\%      &0.93\%     &50.25\%     &1.52\%       \\
+  120 GeV $<\ M_{e^+e^-}^{recoil}\ <$ 160 GeV                       &78.8\%           &0.01\%  &0.00\%   &0.01\%       &0.19\%      &0.36\%     &12.57\%     &0.28\%       \\
+  80 GeV $<\ M_{e^+e^-}\ <$ 100 GeV                                 &66.6\%           &0.00\%  &0.00\%   &0.01\%       &0.07\%      &0.12\%     &4.32\%      &0.10\%       \\
+  $p_{\rm{T}e^+e^-}\ >$ 20 GeV                                      &63.7\%           &0.00\%  &0.00\%   &0.01\%       &0.06\%      &0.11\%     &3.46\%      &0.06\%       \\
+  $\Delta\phi\ <$ 175$^{\circ}$                                     &61.8\%           &0.00\%  &0.00\%   &0.00\%       &0.06\%      &0.11\%     &3.33\%      &0.06\%       \\
+  BDT cut                                                           &40.9\%           &0.00\%  &0.00\%   &0.00\%       &0.01\%      &0.01\%     &0.48\%      &0.01\%       \\
+  fit window                                                        &40.4\%           &0.00\%  &0.00\%   &0.00\%       &0.01\%      &0.01\%     &0.46\%      &0.01\%       \\  \bottomrule
+\end{tabular*}
+\label{tab:cutflow1}
+\end{center}
+
+\begin{multicols}{2}
+
+Figure~\ref{recoilee} shows the $e^+e^-$ recoil mass spectrum of the candidates with ${\cal B}(H\rightarrow \rm{inv.})$ = 50\%.
+In this scenario, the final signal event selection efficiency is 63.9\% and the relative precision of the cross section of Higgs decaying to invisible
+final states $\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ reaches 2.02\%.
+
+\begin{center}
+\centering
+\includegraphics[width=7.cm]{Plots/DataRooFitPlotee.pdf}
+\figcaption{The recoil mass spectrum of $e^+e^-$ in the measurement of the invisible decay mode of the Higgs boson with ${\cal B}(H\rightarrow \rm{inv.})$ = 50\%.
+  The dots with error bars represent the CEPC simulation.
+  The solid (blue) line indicates the fit.
+  The dashed (red) and the long-dashed (green) line are the signal and the background, respectively.
+}
+\label{recoilee}
+\end{center}
+
+\begin{center}
+\centering
+\includegraphics[width=6.7cm]{Plots/invpreee.pdf}
+\figcaption{The precision of the cross section of Higgs decaying to invisible final states
+$\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ versus ${\cal B}(H\rightarrow \rm{inv.})$.}
+\label{invisibleee}
+\end{center}
+
+Based on different assumptions of ${\cal B}(H\rightarrow \rm{inv.})$,
+the relative precisions of $\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ are given in Fig.~\ref{invisibleee}.
+The upper limit of ${\cal B}(H\rightarrow \rm{inv.})$ at 95\% confidence level is estimated to be 3.2 $\times$ 10$^{\rm{-2}}$ by using the likelihood ratio test method~\cite{likeli}.
+
+\subsection{Measurement with $Z\rightarrow \mu^+\mu^-$}
+The event selection criteria are similar with those in the $e^+e^-$ channel. In this part, there is no requirement on the polar angle of the muons and the recoiling mass window is tighten
+to 120 GeV $<\ M_{recoil}^{\mu^+\mu^-}\ <$ 150 GeV. In the MVA stage, the polar angle of a single muon is not taken as an input variable. The BDT selection is optimized to the $\sigma_{ZH,H\rightarrow inv.}$ measurement. The cut flow is summarized in Table~\ref{tab:cutflow} and the signal selection efficiency is 62.1\%.
+
+Figure~\ref{recoilmumu} shows the $\mu^+\mu^-$ recoil mass spectrum of the candidates with ${\cal B}(H\rightarrow \rm{inv.})$ = 50\%.
+In this scenario, the final signal event selection efficiency is 62.1\% and the relative precision of the cross section of Higgs decaying to invisible
+final states $\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ reaches 1.48\%.
+
+\begin{center}
+\centering
+\includegraphics[width=7.cm]{Plots/DataRooFitPlotmumu.pdf}
+\figcaption{The recoil mass spectrum of $\mu^+\mu^-$ in the measurement of the invisible decay mode of the Higgs boson with ${\cal B}(H\rightarrow \rm{inv.})$ = 50\%.
+  The dots with error bars represent the CEPC simulation.
+  The solid (blue) line indicates the fit.
+  The dashed (red) and the long-dashed (green) line are the signal and the background, respectively.
+}
+\label{recoilmumu}
+\end{center}
+
+\begin{center}
+\centering
+\includegraphics[width=6.7cm]{Plots/invpremumu.pdf}
+\figcaption{The precision of the cross section of Higgs decaying to invisible final states
+$\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ versus ${\cal B}(H\rightarrow \rm{inv.})$.}
+\label{invisiblemumu}
+\end{center}
+
+\end{multicols}
+
+\begin{center}
+%\centering  % 表居中
+  \tabcaption{Efficiencies of signal and background in the $\mu^+\mu^-$ channel}
+  \footnotesize
+  \begin{tabular*}{170mm}{@{\extracolsep{\fill}}ccccccccc}  \toprule
+%\begin{tabular}{lcccccccccc}  % {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
+                                                                    &$Z(\mu^+\mu^-)H$ &$ZZ$    &$WW$     &$ZZ$ or $WW$ &Single $Z$  &Single $W$ &$Z$ or $W$  &$Z$(2$f$)    \\  \hline
+  total generated                                                   &35247            &5347053 &44180832 &17801222     &7809747     &17020770   &1246802     &418595861    \\        $N_{\mu^+}$= 1, $N_{\mu^-}$= 1, $N_{ch}$=2                        &92.9\%           &0.97\%  &0.46\%   &3.91\%       &0.87\%      &0.00\%     &0.00\%      &1.57\%       \\
+  120 GeV $<\ M_{\mu^+\mu^-}^{recoil}\ <$ 160 GeV                   &90.7\%           &0.13\%  &0.17\%   &0.70\%       &0.17\%      &0.00\%     &0.00\%      &0.17\%       \\
+  80 GeV $<\ M_{\mu^+\mu^-}\ <$ 100 GeV                             &84.3\%           &0.06\%  &0.06\%   &0.22\%       &0.08\%      &0.00\%     &0.00\%      &0.10\%       \\
+  $p_{\rm{T}\mu^+\mu^-}\ >$ 20 GeV                                  &78.8\%           &0.04\%  &0.05\%   &0.17\%       &0.07\%      &0.00\%     &0.00\%      &0.02\%       \\
+  $\Delta\phi\ <$ 175$^{\circ}$                                     &76.5\%           &0.04\%  &0.05\%   &0.17\%       &0.07\%      &0.00\%     &0.00\%      &0.01\%       \\
+  BDT cut                                                           &62.3\%           &0.02\%  &0.01\%   &0.06\%       &0.03\%      &0.00\%     &0.00\%      &0.01\%       \\
+  fit window                                                        &62.1\%           &0.02\%  &0.01\%   &0.06\%       &0.03\%      &0.00\%     &0.00\%      &0.01\%       \\  \bottomrule
+\end{tabular*}
+\label{tab:cutflow}
+\end{center}
+
+\begin{multicols}{2}
+
+Based on different assumptions of ${\cal B}(H\rightarrow \rm{inv.})$,
+the relative precisions of $\delta\sigma_{ZH, H\rightarrow \rm{inv.}}/\sigma_{ZH, H\rightarrow \rm{inv.}}$ are given in Fig.~\ref{invisiblemumu}.
+The upper limit of ${\cal B}(H\rightarrow \rm{inv.})$ at 95\% confidence level is estimated to be 1.7 $\times$ 10$^{\rm{-2}}$ by using the likelihood ratio test method~\cite{likeli}.
+
+\subsection{Measurement with $Z\rightarrow q\bar{q}$}
+In the hadronic channel, all the particle flow objects have to be clustered into jets before the analysis could go further. In the CEPC environment, two dedicated packages are available at current. FastJet\cite{ref:fastjet} is one option which is widely used in experimental and phenomenological studies, it is light weighted and less time consuming. Meanwhile, LCFIPlus\cite{ref:lcfiplus} is another available package developed based upon vertex finding, it will take the advantage of detector but heavily time consumed.
+
+The event selection criteria for hadronic channel are almost the same with the leptonic one, except the constrains for number of leptons in each events. The mass window of recoiling against Z boson is expanded from 85GeV to 160GeV due to the resolution of momentum for jets. The Z peak in this region may decrease the uncertainty when the likelihood estimation is applied. The efficiencies for signal is and those for all channels are listed in Tab.~\ref{tab:qqcutflow}.
+
+\end{multicols}
+
+\begin{center}
+  \tabcaption{Efficiencies of signal and background in the $q\bar{q}$ channel}
+  \footnotesize
+  \begin{tabular*}{170mm}{@{\extracolsep{\fill}}ccccccccc}  \toprule
+                                                                  							&$Z(q\bar{q})H$ &$ZZ$    &$WW$     &$ZZ$ or $WW$ &Single $Z$  &Single $W$ &$Z$ or $W$  &$Z$(2$f$)    \\  \hline
+  total generated                                       							&723755            &5711445 &44794678 &17977941     &7913405     &17361538   &1259165     &423674068    \\       
+  $\rm{N}_{Lep}\le1$, $\rm{N}_{trks}\le40$, $10<\rm{N}_{clus}<90$              &95.91\%           &45.09\%  &66.13\%   &47.65\%       &12.25\%      &59.70\%     &0.00\%      &45.70\%       \\
+  50 GeV $<\ M_{q\bar{q}}\ <$ 120 GeV                             				&95.12\%           &19.08\%  &9.43\%   &0.47\%       &8.80\%      &7.33\%     &0.00\%      &25.07\%       \\
+  $p_{\rm{T}q\bar{q}}\ <$ 90 GeV                                 				 &95.11\%           &18.99\%  &8.51\%   &0.47\%       &8.77\%      &6.14\%     &0.00\%      &25.07\%       \\
+  $p_{\rm{z}q\bar{q}}\ <$ 80 GeV                                 				 &95.06\%           &14.06\%  &6.35\%   &0.15\%       &6.76\%      &3.75\%     &0.00\%      &4.53\%       \\
+  BDT cut                                                          						 &           &0.02\%  &0.01\%   &0.06\%       &0.03\%      &0.00\%     &0.00\%      &0.01\%       \\
+  fit window                                                        						&           &0.02\%  &0.01\%   &0.06\%       &0.03\%      &0.00\%     &0.00\%      &0.01\%       \\  \bottomrule
+\end{tabular*}
+\label{tab:qqcutflow}
+\end{center}
+\begin{multicols}{2}
+
+\section{Discussion on systematic uncertainties}
+
+\section{Summary}
+
+\end{multicols}
+
+\vspace{2mm}
+\centerline{\rule{80mm}{0.1pt}}
+\vspace{2mm}
+
+
+\begin{multicols}{2}
+
+\begin{thebibliography}{90}
+
+\vspace{3mm}
+\bibitem{higgsdis1}  G. Aad et al (The ATLAS Collaboration), Phys.\ Lett.\ B, {\bf 716}: 1 (2012)
+\bibitem{higgsdis2}  S. Chatrchyan et al (The CMS Collaboration), Phys.\ Lett.\ B, {\bf 716}: 30 (2012)
+\bibitem{lhcsub1}    S. Chatrchyan et al (The CMS Collaboration), JHEP, {\bf 06}: 081 (2013)
+\bibitem{lhcsub2}    G. Aad et al (The ATLAS Collaboration), Phys. Lett. B, {\bf 726}: 88 (2013)
+\bibitem{lhcsub3}    G. Aad et al (The ATLAS Collaboration), Phys. Lett. B, {\bf 726}: 120 (2013)
+\bibitem{lhcsub4}    V. Khachatryan et al (The CMS Collaboration), Eur. Phys. J. C, {\bf 75}: 212 (2015)
+\bibitem{lhcsub5}    V. Khachatryan et al (The CMS Collaboration), Phys. Rev. D, {\bf 92}: 012004 (2015)
+\bibitem{lhcsub6}    G. Aad et al (The ATLAS Collaboration and CMS Collaboration), Phys. Rev. Lett., {\bf114}: 191803 (2015)
+\bibitem{ild1}       The ILD concept group, arXiv:1006.3396
+\bibitem{ild2}       T. Behnke, J. Brau, P. Burrows et al, arXiv: 1306.6329
+\bibitem{ILC}        H. Baer, T. Barklow, K. Fujii et al, arXiv:1306.6352
+\bibitem{CEPC} M. Ahmad et al (The CEPC-SPPC Study Group), CEPC-SppC Preliminary Conceptual Design Report: Physics and Detector, http://cepc.ihep.ac.cn/preCDR/main preCDR.pdf, retrieved 4th May 2015
+\bibitem{whizard1}   W. Kilian, T. Ohl and J. Reuter,  Eur. Phys. J. C, {\bf 71}: 1742 (2011)
+\bibitem{whizard2}   M. Moretti, T. Ohl and J. Reuter,  arXiv: hepph/0102195
+\bibitem{samples} Xin Mo, Gang Li, Manqi Ruan et al, Chin. Phys. C, {\bf 40}: 033001 (2016)
+\bibitem{Mokka} P. Mora de Freitas and H. Videau, Detector simulation with Mokka/Geant4: present and future, in the International Workshop on Linear Colliders (LCWS 2002)
+\bibitem{arbor} Manqi Ruan, arXiv: 1403.4784
+\bibitem{TMVA} P. Speckmayer, A. Hocker, J. Stelzer et al, J. Phys. Conf. Ser., {\bf 219}: 032057 (2010)
+\bibitem{likeli} G. Cowan, K. Cranmer, E. Gross et al, Eur. Phys. J. C, {\bf 71}: 1554 (2011)
+\bibitem{ref:fastjet}M. Cacciari, G. P. Salam, Phys. Lett. B, 2006, {\bf 641}:57 [hep-ph/0512210], M. Cacciari, G.P. Salam, G. Soyez, Eur. Phys. J. C, 2012, {\bf 72}:1896[arXiv:1111.6097].
+\bibitem{ref:lcfiplus}T. Suehara, T. Tanabe, arXiv:1506.08371
+
+
+\end{thebibliography}
+\end{multicols}
+
+
+\clearpage
+
+\end{CJK*}
+\end{document}
